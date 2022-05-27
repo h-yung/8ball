@@ -18,54 +18,42 @@ const server = http.createServer((req, res) => {
       res.end();
     });
   }
-  else if (page == '/otherpage') {
+  /*else if (page == '/otherpage') {
     fs.readFile('otherpage.html', function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(data);
       res.end();
     });
-  }
-  else if (page == '/otherotherpage') {
+  }*/
+  /*else if (page == '/otherotherpage') {
     fs.readFile('otherotherpage.html', function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(data);
       res.end();
     });
-  }
+  }*/
   else if (page == '/api') {
-    if('subject' in params){
-      // if (params['question']==="papa%johns"){
-
-      if (params['subject'].includes('papa%20johns')){
-        res.writeHead(200, {'Content-Type': 'application/json'});
-        /*** */
-        const objToJson = {
-          subject: "papa johns",  //check against main.js input value formatting
-          status: "not Dominos",
-          verdict: ["Have nothing to do with it!"],
-        }
-        res.end(JSON.stringify(objToJson));
-      }//question = papa johns
-      // else if(params['subject'] !=="papa%20johns"){
-      else if(!params['subject'].includes('papa%20johns')){
-        res.writeHead(200, {'Content-Type': 'application/json'});
+    
         const objToJson = {
           subject: "",  
           status: "",
           verdict: [  //low-key way to create randomization potential
-          "Bet.",
-          "Signs point to yes.",
+          "YOLO",
+          "Signs point to yes...first TRYYYY!",
           "Most likely!",
           "Do a pomodoro and ask again.",
           "Sources say no.",
           "Very doubtful...",
-          "Outlook not so good.",
-          "Have nothing to do with it!"
+          "Outlook not so good,",
+          "No...you got GOT!",
+          "Let's do a Twitch raid!",
+          "I automagically say yes.",
+          "Yes, now go GET!",
+          "Get in your spaced repetition and ask again later."
         ]
         }
         res.end(JSON.stringify(objToJson));
-      }//question != papa johns
-    }//question if
+      
   }//else if
   else if (page == '/css/style.css'){
     fs.readFile('css/style.css', function(err, data) {
