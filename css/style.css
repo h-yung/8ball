@@ -1,3 +1,141 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
 h1{
   color: red;
+  font: 2rem serif;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+}
+
+span {
+  font: italic 1rem serif;
+  margin-bottom: 1rem;
+}
+
+
+button {
+  background: lightcoral;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid coral;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+}
+
+button:hover,
+button:active {
+  background: hsla(0, 79%, 72%, 0.546);
+  border: 1px solid red;
+  color: red;
+}
+
+body {
+  /* flex container */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  /* flex container */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  width: 3rem;
+  margin: 1rem;
+  transition: all 1s ease-out 0s;
+}
+
+header img:hover {
+  transform: rotatez(360deg);
+}
+
+form {
+  margin: 1rem 0; 
+}
+
+input {
+  width: 15rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid gray;
+  color: lightslategray;
+  /* font-weight: bold; */
+}
+
+
+footer {
+  width: 100vw;
+  padding: 3rem;
+  font-size: smaller;
+  text-align: center;
 }
