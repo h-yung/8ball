@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
           "Do a pomodoro and ask again.",
           "Sources say no.",
           "Very doubtful...",
-          "Outlook not so good,",
+          "Outlook not so good.",
           "No...you got GOT!",
           "Let's do a Twitch raid!",
           "I automagically say yes.",
@@ -80,6 +80,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(8000);
-
+console.log('server running on 8000')
 
 
