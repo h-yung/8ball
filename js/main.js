@@ -1,4 +1,5 @@
-document.querySelector('#clickMe').addEventListener('click', function(e){e.preventDefault(); makeReq()})
+document.querySelector('form').addEventListener('submit', function(e){e.preventDefault(); makeReq()})
+document.querySelector('#clickMe').addEventListener('click', makeReq)
 
 async function makeReq(){
   const question = document.querySelector("#question").value.toLowerCase(); //taking value from user input to input element
